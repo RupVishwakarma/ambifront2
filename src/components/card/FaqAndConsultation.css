@@ -1,0 +1,231 @@
+:root {
+  --primary-color: #0078d7;
+  --secondary-color: #32cd32;
+  --dark-background: #1a1a2e;
+  --light-background: #f4f4f4;
+  --text-color: #333;
+  --white: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-background);
+  color: var(--text-color);
+}
+
+.faq-consultationn {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px; */
+}
+
+/* FAQ Section */
+.faq-sectionn {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed) ease;
+}
+
+.faq-sectionn:hover {
+  transform: translateY(-10px);
+}
+
+.faq-sectionn h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.faq-sectionn h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--secondary-color);
+}
+
+.faq-sectionn > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.faq-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-list li {
+  background: var(--light-background);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+}
+
+.faq-questionn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  background: var(--white);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-speed) ease;
+}
+
+.faq-questionn:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  border-bottom-color: var(--secondary-color);
+}
+
+.faq-questionn span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-questionn button {
+  background: var(--secondary-color);
+  color: var(--white);
+  width: 10px;
+  height: 60px;
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: transform var(--transition-speed) ease;
+}
+
+.faq-questionn:hover button {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 20px;
+  background: var(--light-background);
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Consultation Section */
+.consultationn-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.consultationn-box {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  /* max-width: 500px; */
+  width: 100%;
+  box-shadow: 0 25px 50px rgba(0, 120, 215, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.consultationn-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(-45deg);
+}
+
+.consultationn-box h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.consultationn-box p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+}
+
+.consult-btn {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.consult-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .faq-consultation {
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq-section h2 {
+      font-size: 2rem;
+  }
+
+  .consultation-box {
+      padding: 30px 20px;
+  }
+
+  .consultation-box h3 {
+      font-size: 1.5rem;
+  }
+}

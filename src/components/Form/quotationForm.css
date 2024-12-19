@@ -1,0 +1,78 @@
+.quotation-form-container-wrapper {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quotation-form-container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .quotation-form-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quotation-form-title {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+  .quotation-form-label {
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold; 
+    margin-bottom: 8px; 
+}
+
+  .respon-contact,
+  .text_area {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .respon-contact:focus,
+  .text_area:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .text_area {
+    height: 120px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  @media (max-width: 768px) {
+    .quotation-form-container-wrapper {
+      padding: 1rem; 
+    }
+  
+    .quotation-form-container {
+      max-width: 90%; 
+    }
+  
+    button {
+      font-size: 0.9rem; 
+      padding: 0.5rem 1.5rem; 
+    }
+  
+  }
